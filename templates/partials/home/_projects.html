@@ -46,16 +46,16 @@
                                     <a href="{% url 'project_detail' proj.pk %}" class="collection-image img-style">
                                         {% with proj.images.first as img %}
                                             {% if img %}
-                                                <img class="lazyload" data-src="{{ img.image_resized.url }}" src="{{ img.image_resized.url }}" alt="صورة المشروع">
+                                                <img class="lazyload" data-src="{{ img.image.url }}" src="{{ img.image.url }}" alt="صورة المشروع">
                                             {% else %}
                                                 <img src="{% static 'images/placeholder.png' %}" alt="لا توجد صورة">
                                             {% endif %}
                                         {% endwith %}
                                     </a>
                                     <div class="collection-content">
-                                        <a href="{% url 'project_detail' proj.pk %}" class="tf-btn collection-title hover-icon fs-15 bg-dark">
-                                            <span class="">{{ proj.title }}</span>
-                                            <i class="icon icon-arrow1-top-left "></i>
+                                        <a href="{% url 'project_detail' proj.pk %}" class="tf-btn collection-title hover-icon fs-15 bg-dark link_kayan">
+                                            <span class="link_kayan">{{ proj.title }}</span>
+                                            <i class="icon icon-arrow1-top-left link_kayan"></i>
                                         </a>
                                     </div>
                                 </div>
