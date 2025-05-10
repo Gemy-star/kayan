@@ -46,7 +46,7 @@
                                     <a href="{% url 'project_detail' proj.pk %}" class="collection-image img-style">
                                         {% with proj.images.first as img %}
                                             {% if img %}
-                                                <img class="lazyload" data-src="{{ img.image.url }}" src="{{ img.image.url }}" alt="صورة المشروع">
+                                                <img class="lazyload" data-src="{{ img.image_resized.url }}" src="{{ img.image_resized.url }}" alt="صورة المشروع">
                                             {% else %}
                                                 <img src="{% static 'images/placeholder.png' %}" alt="لا توجد صورة">
                                             {% endif %}
